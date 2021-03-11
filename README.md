@@ -2,7 +2,7 @@
 A simple script for apply LSE to GPS data.
 It was developed for the final project of the ICTP diploma/PhD Space Geodesy course.
 
-The procedure implemented is a semplified version of the one described in
+The procedure implemented is a semplified version of the one described in\
 Barzaghi, R., Borghi, A. Theory of second order stationary random processes applied to GPS coordinate time-series. *GPS Solut* **22**, 86 (2018). https://doi.org/10.1007/s10291-018-0748-4
 
 ## The implemented procedure 
@@ -13,7 +13,7 @@ Each component of the data has been processed with the following scheme
 
 2.  Least squares are applied using the a white noise covariance matrix and the following deterministic model:\
     x(t)=A0+Av*t+ΣA1(T)*sin(2πt/T)+ΣA2(T)*sin(2πt/T)+ΣAco(Tco)*H(t-Tco)\
-    with *T*<sub>*P*</sub> periodicity within the signal, *T*<sub>*D*</sub> time of known discontinuities in the signals (due to coseismic displacements, instrumentation failures and changes, etc.) and *σ*<sub>*j*</sub><sup>2</sup> variance of the *j*<sup>*th*</sup> measure.  \
+    with *T* periodicity within the signal, *T*<sub>*co*</sub> time of known discontinuities in the signals (due to coseismic displacements, instrumentation failures and changes, etc.).\
     As it is obvious from the stochastic model, the data are initially
     assumed uncorrelated.
 
@@ -35,5 +35,5 @@ Each component of the data has been processed with the following scheme
 The script has been developed to work with 24 hour final solutions (.tenv3) files from the Nevada Geodetic Laboratory.\
 It also requires the NGL's Database of Potential Step Discontinuities (steps.txt).
 As a result of a correct run, the script produces an output file with the results with the same name of the station and extension .res.\
-To run correctly the script the name of the station has to be passed as an argument at the start, e.g.\
->>>python SGprojBB.py AZ00
+To run correctly the script the name of the station has to be passed as an argument at the start, e.g.
+```python SGprojBB.py AZ00```.
