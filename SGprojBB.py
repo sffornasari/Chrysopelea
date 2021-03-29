@@ -263,8 +263,8 @@ if __name__ == '__main__':
 
     #Proper call of the script
     if len(sys.argv) == 1:
-    print("You must specify the station name!")
-    sys.exit(0)
+        print("You must specify the station name!")
+        sys.exit(0)
     
     #Specify the number of observation to use (from the newest)
     lastdata = 1817
@@ -295,8 +295,6 @@ if __name__ == '__main__':
             disctime = int(np.round(367 * year - 7 * (year + (month + 9)/12)/4 + 275 * month/9 + day - 678986.5))
             if disctime not in env.disclist:
                 env.disclist.append(disctime)
-                if  ascheck == True and row[2] == 2:
-                    env.seisdisclist.append(disctime)
     
     #Correcting the data for gaps (interpolated) & other preprocessing steps
     env.pre_proc()
