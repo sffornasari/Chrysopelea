@@ -1,13 +1,13 @@
 # Chrysopelea
 ![Logo](/flogo.png)\
-A simple script for apply LSE to GPS data.
+A simple script for applying LSE to GPS data.
 It was developed for the final project of the ICTP diploma/PhD Space Geodesy course.
 
-The procedure implemented is a semplified version of the one described in\
+The procedure implemented is a simplified version of the one described in\
 Barzaghi, R., Borghi, A. Theory of second order stationary random processes applied to GPS coordinate time-series. *GPS Solut* **22**, 86 (2018). https://doi.org/10.1007/s10291-018-0748-4
 
 ## The implemented procedure 
- Using the 'color noise' stochastic model, each component of the data has been processed with the following scheme:
+ Using the 'colour noise' stochastic model, each component of the data has been processed with the following scheme:
 
 1.  In a pre-processing phase the data are interpolated to remove possible data gap;
 
@@ -20,7 +20,7 @@ Barzaghi, R., Borghi, A. Theory of second order stationary random processes appl
 
 4.  The least squares residuals *ϵ*(*t*) are computed and checked for the stationary hypothesis using the KPSS test;
 
-5.  The empirical Auto-Covariance Function *α*(*τ*) of the residuals is computed and it is used to define a "color noise" stochastic model: to avoid numerical problem, due to the inversion of the covariance matrix of the data, when estimating the parameters, the auto-covariance function *α*(*τ*) is fitted using a positive definite function.
+5.  The empirical Auto-Covariance Function *α*(*τ*) of the residuals is computed and it is used to define a "colour noise" stochastic model: to avoid numerical problems, due to the inversion of the covariance matrix of the data, when estimating the parameters, the auto-covariance function *α*(*τ*) is fitted using a positive definite function.
 
 5.  Least squares are applied using the updated stochastic model to evaluate the parameters **x̂**.
 
